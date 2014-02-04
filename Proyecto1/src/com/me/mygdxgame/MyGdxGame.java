@@ -2,6 +2,7 @@ package com.me.mygdxgame;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -56,7 +57,10 @@ public class MyGdxGame implements ApplicationListener {
 		sprite.draw(batch);
 		batch.end();
 		sprite.setRotation(rotacion);
-		rotacion++;
+		if (Gdx.input.isTouched())
+		{
+			rotacion++;
+		}
 	}
 
 	@Override
